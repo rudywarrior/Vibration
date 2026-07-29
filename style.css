@@ -1,193 +1,120 @@
-body{
+body {
+
+    margin: 0;
+    padding: 20px;
+
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+
+    background:
+    linear-gradient(
+        135deg,
+        #d96b6b,
+        #e6c875,
+        #68b984
+    );
+
+}
 
 
-margin:0;
+/* カード本体 */
 
-padding:20px;
+.vibes-card {
+
+    max-width: 500px;
+
+    margin: auto;
+
+    padding: 30px;
+
+    border-radius: 28px;
+
+    background:
+    rgba(255,255,255,0.92);
 
 
-font-family:
--apple-system,
-BlinkMacSystemFont,
-"Helvetica Neue",
-Arial,
-sans-serif;
-
-
-background:
-
-linear-gradient(
-135deg,
-#D96B6B,
-#E6C875,
-#68B984
-);
-
+    box-shadow:
+    0 15px 40px rgba(0,0,0,0.15);
 
 }
 
 
 
-.vibes-card{
+/* 見出し */
+
+.label {
+
+    text-align:center;
+
+    font-size:12px;
+
+    letter-spacing:6px;
+
+    font-weight:bold;
+
+    margin-bottom:25px;
 
 
-background:
-rgba(255,255,255,0.94);
+    background:
+    linear-gradient(
+        90deg,
+        #d96b6b,
+        #e6c875,
+        #68b984
+    );
 
+    -webkit-background-clip:text;
 
-border-radius:28px;
-
-
-padding:30px;
-
-
-box-shadow:
-
-0 15px 40px
-rgba(0,0,0,0.15);
-
-
-}
-
-
-
-.label{
-
-
-text-align:center;
-
-
-font-size:12px;
-
-
-letter-spacing:6px;
-
-
-font-weight:bold;
-
-
-background:
-
-linear-gradient(
-90deg,
-#D96B6B,
-#E6C875,
-#68B984
-);
-
-
--webkit-background-clip:text;
-
-
-color:transparent;
-
-
-margin-bottom:25px;
-
+    color:transparent;
 
 }
 
 
 
-.message{
+/* 本文 */
 
+.message {
 
-font-size:22px;
+    font-size:22px;
 
+    line-height:1.8;
 
-line-height:1.8;
-
-
-font-weight:600;
-
+    font-weight:600;
 
 }
 
 
 
-.author{
+/* Author */
 
+.author {
 
-text-align:right;
+    margin-top:20px;
 
+    text-align:right;
 
-margin-top:18px;
+    padding-right:10px;
 
+    font-size:14px;
 
-font-size:14px;
-
-
-opacity:0.7;
-
-
-}
-
-
-
-.source{
-
-
-margin-top:15px;
-
-
-font-size:13px;
-
-
-opacity:0.65;
-
+    opacity:0.65;
 
 }
 
 
 
-.related-area{
+/* Source */
 
+.source {
 
-margin-top:18px;
+    margin-top:12px;
 
+    font-size:13px;
 
-display:flex;
-
-
-align-items:center;
-
-
-gap:12px;
-
-
-}
-
-
-
-.related{
-
-
-font-size:12px;
-
-
-opacity:0.6;
-
-
-}
-
-
-
-.media{
-
-
-width:45px;
-
-
-height:45px;
-
-
-border-radius:10px;
-
-
-object-fit:cover;
-
-
-display:none;
-
+    opacity:0.6;
 
 }
