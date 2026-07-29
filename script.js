@@ -8,6 +8,12 @@ async function loadVibes(){
 
         const response = await fetch(API_URL);
 
+
+        if (!response.ok) {
+            throw new Error("API Error: " + response.status);
+        }
+
+
         const data = await response.json();
 
 
@@ -27,13 +33,16 @@ async function loadVibes(){
 
     } catch(error){
 
-    console.error(error);
+        console.error(error);
 
-    document.getElementById("title").textContent =
 
-    error.message;
+        document.getElementById("title").textContent =
+        "Vibration Error";
 
-}
+
+        console.log(error.message);
+
+    }
 
 }
 
