@@ -1,49 +1,84 @@
-console.log("VIBES SCRIPT NEW");
-
 const API_URL =
 "https://vibration-api.rudywarrior-oct24.workers.dev";
 
 
 async function loadVibes(){
 
-    try {
 
-        const response = await fetch(API_URL);
-
-        console.log("status:", response.status);
-        console.log("content-type:", response.headers.get("content-type"));
+try{
 
 
-        const text = await response.text();
-
-        console.log("response:", text);
-
-
-        const data = JSON.parse(text);
+const response =
+await fetch(API_URL);
 
 
-        document.getElementById("title").textContent =
-        data.title || "No Title";
+const data =
+await response.json();
 
 
-        document.getElementById("author").textContent =
-        data.author
-        ? "— " + data.author
-        : "";
+
+document.getElementById("title").textContent =
+data.title;
 
 
-        document.getElementById("source").textContent =
-        data.source || "";
+
+document.getElementById("author").textContent =
+data.author
+?
+"— " + data.author
+:
+"";
 
 
-    } catch(error){
 
-        console.error("ERROR:", error);
+document.getElementById("source").textContent =
+data.source
+?
+"🎵 " + data.source
+:
+";
 
-        document.getElementById("title").textContent =
-        error.message;
 
-    }
+
+
+if(data.related){
+
+document.getElementById("related").textContent =
+"📚 Related Cabinet";
+
+}
+
+
+
+if(data.media){
+
+
+const img =
+document.getElementById("media");
+
+
+img.src=data.media;
+
+img.style.display="block";
+
+
+}
+
+
+
+}catch(error){
+
+
+console.error(error);
+
+
+document.getElementById("title").textContent =
+"Vibration Error";
+
+
+}
+
+
 
 }
 
