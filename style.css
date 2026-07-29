@@ -1,210 +1,199 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-
-font-family:
--apple-system,
-BlinkMacSystemFont,
-"Helvetica Neue",
-sans-serif;
-
-background:transparent;
-
+    font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+    background:transparent;
 }
 
-/*========================*/
+/* ========================= */
 
 .card{
 
-position:relative;
+    position:relative;
 
-overflow:hidden;
+    overflow:hidden;
 
-padding:26px;
+    padding:28px 28px 28px 180px;
 
-border-radius:20px;
+    border-radius:20px;
 
-background:#fffefc;
+    background:#fffefc;
 
-box-shadow:
-0 6px 25px rgba(0,0,0,.08);
+    box-shadow:
+        0 8px 24px rgba(0,0,0,.08);
 
 }
 
-/*========================*/
+/* ========================= */
+/* Record */
 
 .record-wrapper{
 
-position:absolute;
+    position:absolute;
 
-top:-85px;
+    left:-90px;
 
-right:-85px;
+    top:50%;
 
-width:320px;
+    transform:translateY(-50%);
 
-height:320px;
+    width:300px;
 
-pointer-events:none;
+    height:300px;
 
-z-index:0;
+    pointer-events:none;
+
+    z-index:0;
+
+}
+
+.record{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+    opacity:.14;
+
+    transform-origin:center center;
+
+    animation:spin 20s linear infinite;
 
 }
 
-.record-wrapper{
+/* レコード回転 */
 
-position:absolute;
-
-left:-110px;
-
-top:50%;
-
-transform:translateY(-50%);
-
-width:300px;
-
-height:300px;
-
-pointer-events:none;
-
-z-index:0;
-
-}
 @keyframes spin{
 
-from{
+    from{
+        transform:rotate(0deg);
+    }
 
-transform:rotate(0deg);
-
-}
-
-to{
-
-transform:rotate(360deg);
+    to{
+        transform:rotate(360deg);
+    }
 
 }
 
-}
-
-/*========================*/
+/* ========================= */
 
 .text{
 
-position:relative;
+    position:relative;
 
-z-index:5;
+    z-index:5;
 
-font-size:24px;
+    font-size:24px;
 
-font-weight:600;
+    font-weight:600;
 
-line-height:1.75;
+    line-height:1.75;
 
-color:#222;
-
-max-width:78%;
+    color:#222;
 
 }
 
-/*========================*/
+/* ========================= */
 
 .author{
 
-position:relative;
+    position:relative;
 
-z-index:5;
+    z-index:5;
 
-margin-top:22px;
+    margin-top:22px;
 
-text-align:right;
+    text-align:right;
 
-font-size:15px;
+    font-size:15px;
 
-font-style:italic;
+    font-style:italic;
 
-color:#666;
+    color:#666;
 
 }
 
-/*========================*/
+/* ========================= */
 
 .footer{
 
-position:relative;
+    position:relative;
 
-z-index:5;
+    z-index:5;
 
-margin-top:22px;
+    margin-top:20px;
 
-padding-top:16px;
+    padding-top:14px;
 
-border-top:
-1px solid rgba(0,0,0,.08);
+    border-top:1px solid rgba(0,0,0,.08);
 
-display:flex;
+    display:flex;
 
-justify-content:space-between;
+    justify-content:space-between;
 
-align-items:center;
+    align-items:center;
 
-gap:12px;
+    gap:12px;
 
 }
 
 .related{
 
-font-size:12px;
+    font-size:12px;
 
-color:#777;
+    color:#777;
 
-overflow:hidden;
+    overflow:hidden;
 
-white-space:nowrap;
+    white-space:nowrap;
 
-text-overflow:ellipsis;
+    text-overflow:ellipsis;
 
 }
 
 .media{
 
-width:44px;
+    width:46px;
 
-height:44px;
+    height:46px;
 
-border-radius:10px;
+    border-radius:10px;
 
-object-fit:cover;
+    object-fit:cover;
 
-display:none;
+    display:none;
 
 }
 
-/*========================*/
+/* ========================= */
+/* Rasta Line */
 
 .card::after{
 
-content:"";
+    content:"";
 
-position:absolute;
+    position:absolute;
 
-left:0;
+    left:0;
 
-bottom:0;
+    bottom:0;
 
-width:100%;
+    width:100%;
 
-height:4px;
+    height:4px;
 
-background:
-linear-gradient(
-90deg,
-#c43f3f 0%,
-#d9b33b 50%,
-#2f8f54 100%
-);
+    background:
+    linear-gradient(
+        90deg,
+        #c94040 0%,
+        #dcb53b 50%,
+        #2f8d54 100%
+    );
 
 }
