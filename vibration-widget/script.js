@@ -1,28 +1,36 @@
-fetch(
-"https://vibration-api.rudywarrior-oct24.workers.dev"
-)
-
-.then(
-response=>response.json()
-)
-
-.then(
-data=>{
+const API_URL =
+"https://vibration-api.rudywarrior-oct24.workers.dev";
 
 
-document.getElementById("title")
-.textContent=
+fetch(API_URL)
 
-"「"+data.title+"」";
+.then(response => response.json())
 
-
-
-document.getElementById("author")
-.textContent=
-
-"— "+data.author;
+.then(data => {
 
 
-}
+document.getElementById("title").textContent =
+data.title;
 
-);
+
+document.getElementById("author").textContent =
+"— " + data.author;
+
+
+document.getElementById("source").textContent =
+data.source;
+
+
+})
+
+.catch(error => {
+
+
+document.getElementById("title").textContent =
+"Vibration Error";
+
+
+console.error(error);
+
+
+});
