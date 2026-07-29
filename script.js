@@ -31,12 +31,6 @@ data.author
 "";
 
 
-
-document.getElementById("source").textContent =
-data.source || "";
-
-
-
 if(data.related){
 
 document.getElementById("related").textContent =
