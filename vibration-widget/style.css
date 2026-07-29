@@ -1,52 +1,88 @@
-body{
+body {
 
 margin:0;
 
-background:#ffffff;
+font-family:
+-apple-system,
+BlinkMacSystemFont,
+"Helvetica Neue",
+Arial,
+sans-serif;
 
-font-family:sans-serif;
+background:white;
 
 }
 
 
-.card{
+.vibes-card {
 
-padding:35px;
+
+padding:25px;
+
+border-radius:18px;
 
 text-align:center;
 
 }
 
 
-.logo{
+.label {
+
 
 font-size:12px;
 
 letter-spacing:5px;
 
-opacity:0.5;
-
-}
-
-
-#title{
-
-margin-top:30px;
-
-font-size:24px;
-
 font-weight:bold;
 
-line-height:1.5;
+background:
+linear-gradient(
+90deg,
+#D96B6B,
+#E6C875,
+#68B984
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+margin-bottom:20px;
+
 
 }
 
 
-#author{
+.message {
+
+
+font-size:22px;
+
+line-height:1.8;
+
+font-weight:600;
+
+}
+
+
+.author {
+
 
 margin-top:20px;
 
 font-size:14px;
+
+opacity:0.7;
+
+}
+
+
+.source {
+
+
+margin-top:12px;
+
+font-size:13px;
 
 opacity:0.6;
 
