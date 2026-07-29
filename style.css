@@ -1,89 +1,127 @@
 body {
 
-    margin: 0;
-    padding: 20px;
 
-    font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Helvetica Neue",
-    Arial,
-    sans-serif;
-
-    background:
-    linear-gradient(
-        135deg,
-        #d96b6b,
-        #e6c875,
-        #68b984
-    );
-
-}
+margin:0;
 
 
-/* カード本体 */
-
-.vibes-card {
-
-    max-width: 500px;
-
-    margin: auto;
-
-    padding: 30px;
-
-    border-radius: 28px;
-
-    background:
-    rgba(255,255,255,0.92);
+padding:20px;
 
 
-    box-shadow:
-    0 15px 40px rgba(0,0,0,0.15);
+background:#f4f0e8;
+
+
+font-family:
+
+-apple-system,
+BlinkMacSystemFont,
+"Helvetica Neue",
+Arial,
+sans-serif;
+
 
 }
 
 
 
-/* 見出し */
-
-.label {
-
-    text-align:center;
-
-    font-size:12px;
-
-    letter-spacing:6px;
-
-    font-weight:bold;
-
-    margin-bottom:25px;
+.card {
 
 
-    background:
-    linear-gradient(
-        90deg,
-        #d96b6b,
-        #e6c875,
-        #68b984
-    );
+position:relative;
 
-    -webkit-background-clip:text;
 
-    color:transparent;
+max-width:500px;
+
+
+margin:auto;
+
+
+padding:35px;
+
+
+background:#fffdf8;
+
+
+border-radius:24px;
+
+
+overflow:hidden;
+
+
+box-shadow:
+
+0 10px 30px rgba(0,0,0,0.12);
+
 
 }
 
 
 
-/* 本文 */
+/* レコード背景 */
 
-.message {
+.record {
 
-    font-size:22px;
 
-    line-height:1.8;
+position:absolute;
 
-    font-weight:600;
+
+right:-70px;
+
+
+top:-70px;
+
+
+width:220px;
+
+
+height:220px;
+
+
+background-image:
+
+url("assets/record.png");
+
+
+background-size:contain;
+
+
+background-repeat:no-repeat;
+
+
+opacity:0.12;
+
+
+pointer-events:none;
+
+
+}
+
+
+
+/* Text */
+
+.text {
+
+
+position:relative;
+
+
+z-index:1;
+
+
+font-size:24px;
+
+
+font-weight:600;
+
+
+line-height:1.8;
+
+
+color:#222;
+
+
+white-space:pre-wrap;
+
 
 }
 
@@ -93,15 +131,30 @@ body {
 
 .author {
 
-    margin-top:20px;
 
-    text-align:right;
+position:relative;
 
-    padding-right:10px;
 
-    font-size:14px;
+z-index:1;
 
-    opacity:0.65;
+
+margin-top:25px;
+
+
+text-align:right;
+
+
+padding-right:8px;
+
+
+font-size:15px;
+
+
+font-style:italic;
+
+
+color:#666;
+
 
 }
 
@@ -111,10 +164,131 @@ body {
 
 .source {
 
-    margin-top:12px;
 
-    font-size:13px;
+position:relative;
 
-    opacity:0.6;
+
+z-index:1;
+
+
+margin-top:15px;
+
+
+font-size:13px;
+
+
+color:#888;
+
+
+}
+
+
+
+/* 下部情報 */
+
+.meta {
+
+
+position:relative;
+
+
+z-index:1;
+
+
+margin-top:25px;
+
+
+padding-top:15px;
+
+
+border-top:1px solid #eee;
+
+
+display:flex;
+
+
+align-items:center;
+
+
+justify-content:space-between;
+
+
+}
+
+
+
+/* Related Cabinet */
+
+.related {
+
+
+font-size:12px;
+
+
+color:#777;
+
+
+}
+
+
+
+/* File Media */
+
+.media {
+
+
+width:55px;
+
+
+height:55px;
+
+
+border-radius:12px;
+
+
+object-fit:cover;
+
+
+display:none;
+
+
+}
+
+
+
+/*
+ラスタアクセント
+*/
+
+.card::after {
+
+
+content:"";
+
+
+position:absolute;
+
+
+bottom:0;
+
+
+left:0;
+
+
+width:100%;
+
+
+height:5px;
+
+
+background:
+
+linear-gradient(
+90deg,
+#d64545 0%,
+#e0b93b 50%,
+#4b8f4b 100%
+);
+
 
 }
