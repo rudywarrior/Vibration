@@ -66,16 +66,16 @@ box-shadow:
 position:absolute;
 
 
-right:-80px;
+right:-100px;
 
 
-top:-80px;
+top:-100px;
 
 
-width:240px;
+width:320px;
 
 
-height:240px;
+height:320px;
 
 
 background-image:
@@ -89,7 +89,7 @@ background-size:contain;
 background-repeat:no-repeat;
 
 
-opacity:0.13;
+opacity:0.15;
 
 
 pointer-events:none;
@@ -97,11 +97,10 @@ pointer-events:none;
 
 animation:
 
-rotateRecord 30s linear infinite;
+rotateRecord 45s linear infinite;
 
 
 }
-
 
 
 /* 回転 */
