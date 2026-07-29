@@ -27,12 +27,13 @@ async function loadVibes(){
 
     } catch(error){
 
-        console.error(error);
+    console.error(error);
 
-        document.getElementById("title").textContent =
-        "Vibration Error";
+    document.getElementById("title").textContent =
 
-    }
+    error.message;
+
+}
 
 }
 
