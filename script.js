@@ -18,7 +18,6 @@ await response.json();
 
 
 
-
 document.getElementById("text").textContent =
 data.title || "";
 
@@ -38,30 +37,26 @@ data.source || "";
 
 
 
-
 if(data.related){
 
-
 document.getElementById("related").textContent =
-"📚 Related Cabinet";
-
+"📚 " + data.related;
 
 }
-
 
 
 
 if(data.media){
 
 
-const image =
+const img =
 document.getElementById("media");
 
 
-image.src=data.media;
+img.src=data.media;
 
 
-image.style.display="block";
+img.style.display="block";
 
 
 }
@@ -75,14 +70,13 @@ console.error(error);
 
 
 document.getElementById("text").textContent =
-"Error";
+"読み込みエラー";
 
 
 }
 
 
 }
-
 
 
 loadVibes();
