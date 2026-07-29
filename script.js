@@ -1,3 +1,5 @@
+console.log("VIBES SCRIPT NEW");
+
 const API_URL =
 "https://vibration-api.rudywarrior-oct24.workers.dev";
 
