@@ -8,16 +8,20 @@ async function loadVibes(){
 
         const response = await fetch(API_URL);
 
+        console.log("status:", response.status);
+        console.log("content-type:", response.headers.get("content-type"));
+
+
         const text = await response.text();
 
-        console.log(text);
+        console.log("response:", text);
 
 
         const data = JSON.parse(text);
 
 
         document.getElementById("title").textContent =
-        data.title;
+        data.title || "No Title";
 
 
         document.getElementById("author").textContent =
@@ -32,7 +36,7 @@ async function loadVibes(){
 
     } catch(error){
 
-        console.error(error);
+        console.error("ERROR:", error);
 
         document.getElementById("title").textContent =
         error.message;
