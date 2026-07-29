@@ -1,36 +1,40 @@
-const API_URL =
+const API_URL = 
 "https://vibration-api.rudywarrior-oct24.workers.dev";
 
 
-fetch(API_URL)
+async function loadVibes(){
 
-.then(response => response.json())
+    try {
 
-.then(data => {
+        const response = await fetch(API_URL);
 
-
-document.getElementById("title").textContent =
-data.title;
+        const data = await response.json();
 
 
-document.getElementById("author").textContent =
-"— " + data.author;
+        document.getElementById("title").textContent =
+        data.title || "No Vibration";
 
 
-document.getElementById("source").textContent =
-data.source;
+        document.getElementById("author").textContent =
+        data.author
+        ? "— " + data.author
+        : "";
 
 
-})
-
-.catch(error => {
-
-
-document.getElementById("title").textContent =
-"Vibration Error";
+        document.getElementById("source").textContent =
+        data.source || "";
 
 
-console.error(error);
+    } catch(error){
+
+        console.error(error);
+
+        document.getElementById("title").textContent =
+        "Connection Error";
+
+    }
+
+}
 
 
-});
+loadVibes();
