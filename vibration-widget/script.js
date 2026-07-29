@@ -1,4 +1,4 @@
-const API_URL = 
+const API_URL =
 "https://vibration-api.rudywarrior-oct24.workers.dev";
 
 
@@ -12,7 +12,7 @@ async function loadVibes(){
 
 
         document.getElementById("title").textContent =
-        data.title || "No Vibration";
+        data.title;
 
 
         document.getElementById("author").textContent =
@@ -30,7 +30,7 @@ async function loadVibes(){
         console.error(error);
 
         document.getElementById("title").textContent =
-        "Connection Error";
+        "Vibration Error";
 
     }
 
