@@ -37,7 +37,7 @@ document.getElementById("related");
 if(data.related && data.related !== "ーーー"){
 
 related.textContent =
-"📚 " + data.related;
+"🌐 " + data.related;
 
 }else{
 
