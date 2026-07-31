@@ -1,12 +1,9 @@
-/* ========================= */
-/* Reset */
-/* ========================= */
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
+
 
 body{
 
@@ -21,9 +18,11 @@ body{
 
 }
 
-/* ========================= */
+
+
+/* ================= */
 /* Card */
-/* ========================= */
+/* ================= */
 
 .card{
 
@@ -31,236 +30,333 @@ body{
 
     overflow:hidden;
 
-    padding:32px;
+    padding:30px;
 
-    border-radius:22px;
+    border-radius:24px;
+
 
     background:
-    linear-gradient(
-        180deg,
-        #fffefb 0%,
-        #fcf8f0 100%
-    );
+    rgba(255,253,248,.88);
+
 
     box-shadow:
-        0 12px 36px rgba(0,0,0,.08);
+
+    0 10px 35px rgba(0,0,0,.07);
 
 }
 
-/* ========================= */
-/* Vinyl */
-/* ========================= */
+
+
+/* ================= */
+/* Record */
+/* ================= */
+
 
 .record-wrapper{
 
     position:absolute;
 
-    left:-90px;
+
+    left:-45px;
+
 
     top:50%;
 
+
     transform:translateY(-50%);
 
-    width:320px;
 
-    height:320px;
+    width:300px;
 
-    pointer-events:none;
+    height:300px;
+
 
     z-index:0;
 
+    pointer-events:none;
+
 }
+
+
 
 .record{
 
     width:100%;
+
     height:100%;
+
 
     object-fit:contain;
 
-    opacity:.11;
+
+    opacity:.13;
+
 
     transform-origin:center center;
 
+
     animation:
-    spin 26s linear infinite;
+
+    spin 30s linear infinite;
+
 
     filter:
-        saturate(.9)
-        contrast(.95);
+
+    saturate(.85)
+
+    contrast(.9);
 
 }
+
+
 
 @keyframes spin{
 
-    from{
+from{
 
-        transform:rotate(0deg);
-
-    }
-
-    to{
-
-        transform:rotate(360deg);
-
-    }
+transform:rotate(0deg);
 
 }
 
-/* ========================= */
-/* Message */
-/* ========================= */
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+
+
+/* ================= */
+/* Text */
+/* ================= */
+
 
 .text{
 
     position:relative;
 
-    z-index:5;
+    z-index:2;
 
-    margin-left:110px;
 
-    max-width:72%;
+    margin-left:90px;
 
-    font-size:25px;
 
-    font-weight:650;
+    max-width:75%;
 
-    line-height:1.85;
+
+    font-size:24px;
+
+
+    font-weight:600;
+
+
+    line-height:1.8;
+
 
     color:#222;
 
-    letter-spacing:.02em;
+
+    letter-spacing:.03em;
 
 }
 
-/* ========================= */
+
+
+
+/* ================= */
 /* Author */
-/* ========================= */
+/* ================= */
+
 
 .author{
 
     position:relative;
 
-    z-index:5;
+    z-index:2;
 
-    margin-top:26px;
+
+    margin-top:22px;
+
+    margin-left:90px;
+
 
     text-align:right;
 
-    font-size:16px;
+
+    font-size:15px;
+
 
     font-style:italic;
+
 
     color:#555;
 
 }
 
-/* ========================= */
+
+
+
+/* ================= */
 /* Footer */
-/* ========================= */
+/* ================= */
+
 
 .footer{
 
     position:relative;
 
-    z-index:5;
+    z-index:2;
 
-    margin-top:28px;
 
-    padding-top:18px;
+    margin-top:25px;
+
+
+    padding-top:15px;
+
 
     border-top:
 
-    1px solid rgba(0,0,0,.08);
+    1px solid rgba(0,0,0,.06);
+
 
     display:flex;
+
 
     justify-content:space-between;
 
+
     align-items:center;
 
-    gap:14px;
-
 }
+
+
+
 
 .related{
 
-    display:flex;
+    font-size:12px;
 
-    align-items:center;
-
-    gap:8px;
-
-    font-size:13px;
-
-    color:#666;
-
-    overflow:hidden;
-
-    white-space:nowrap;
-
-    text-overflow:ellipsis;
+    color:#777;
 
 }
+
+
+
 
 .media{
 
-    width:48px;
+    width:42px;
 
-    height:48px;
+    height:42px;
 
-    border-radius:12px;
+
+    border-radius:10px;
+
 
     object-fit:cover;
 
+
     box-shadow:
 
-        0 4px 10px rgba(0,0,0,.15);
+    0 3px 12px rgba(0,0,0,.15);
 
 }
 
-/* ========================= */
-/* Rasta Line */
-/* ========================= */
+
+
+/* ================= */
+/* Rasta Glow */
+/* ================= */
+
 
 .card::after{
 
-    content:"";
 
-    position:absolute;
+content:"";
 
-    left:0;
 
-    bottom:0;
+position:absolute;
 
-    width:100%;
 
-    height:5px;
+left:0;
 
-    background:
 
-    linear-gradient(
+bottom:0;
 
-        90deg,
 
-        #d62828 0%,
+width:100%;
 
-        #e85d04 12%,
 
-        #f4a300 28%,
+height:6px;
 
-        #ffd60a 45%,
 
-        #c0d725 60%,
 
-        #4caf50 78%,
+background:
 
-        #2d6a4f 100%
+linear-gradient(
 
-    );
+90deg,
 
-    box-shadow:
+#d62828,
 
-        0 -1px 10px rgba(255,210,0,.25);
+#f77f00,
+
+#ffd166,
+
+#80b918,
+
+#2a9d8f
+
+);
+
+
+
+background-size:200% 100%;
+
+
+animation:
+
+rastaMove 8s ease infinite;
+
+
+
+filter:
+
+blur(.2px);
+
+
+
+opacity:.9;
+
+
+}
+
+
+
+@keyframes rastaMove{
+
+
+0%{
+
+background-position:0%;
+
+}
+
+
+50%{
+
+background-position:100%;
+
+}
+
+
+100%{
+
+background-position:0%;
+
+}
+
 
 }
