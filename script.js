@@ -4,71 +4,80 @@ const API_URL =
 
 async function loadVibes(){
 
-
 try{
-
 
 const response =
 await fetch(API_URL);
-
 
 
 const data =
 await response.json();
 
 
+// Text
 
 document.getElementById("text").textContent =
-data.title || "";
+data.title || "ーーー";
 
 
+// Author
 
 document.getElementById("author").textContent =
 data.author
-?
-"— " + data.author
-:
-"";
+? "— " + data.author
+: "";
 
 
-if(data.related){
+// Related Cabinet
 
-document.getElementById("related").textContent =
+const related =
+document.getElementById("related");
+
+
+if(data.related && data.related !== "ーーー"){
+
+related.textContent =
 "📚 " + data.related;
+
+}else{
+
+related.textContent =
+"";
 
 }
 
+
+// File&Media
+
+const media =
+document.getElementById("media");
 
 
 if(data.media){
 
+media.src =
+data.media;
 
-const img =
-document.getElementById("media");
+media.style.display =
+"block";
 
+}else{
 
-img.src=data.media;
-
-
-img.style.display="block";
-
+media.style.display =
+"none";
 
 }
 
 
-
 }catch(error){
-
 
 console.error(error);
 
 
 document.getElementById("text").textContent =
-"読み込みエラー";
-
+"Vibration Error";
 
 }
-
 
 }
 
