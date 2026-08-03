@@ -1,5 +1,5 @@
 const API_URL =
-"https://vibration-api.rudywarrior-oct24.workers.dev";
+"https://vibration.rudywarrior-oct24.workers.dev";
 
 
 async function loadVibes(){
